@@ -7,15 +7,18 @@ export class EventBind extends Component {
         this.state = {
              message:'hello'
         }
-        // 3rd method- binding in class constructor
+        // 3rd approach- binding in class constructor
         // this.clickHandler=this.clickHandler.bind(this)
     }
+    // 1st and 2nd approach
     // clickHandler(){
     //      this.setState({
     //          message:"goodbye!"
     //      })
 
     //  }
+    
+    // 4th approach
     clickHandler=()=>{
         this.setState({
             message:'Goodbye!'
@@ -30,12 +33,12 @@ export class EventBind extends Component {
                 {this.state.message}
 
             </div>
-            {/* 1st method- binding in render method*/}
+            {/* 1st approach- binding in render method*/}
             {/* <button onClick={this.clickHandler.bind(this)}>
                 Click
 
             </button> */}
-            {/* 2nd method- use arrow function */}
+            {/* 2nd approach- use arrow function */}
             {/* <button onClick={()=> this.clickHandler()}>Click</button> */}
             {/* 3rd approach- binding in constructor */}
             {/* 4th approach- class property as arrow functions */}
